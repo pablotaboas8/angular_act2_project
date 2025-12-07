@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Utilización — Tutorial Angular</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Tutorial Angular — angular_act2_project</h1>
+      
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="instalacion.html">Instalación</a>
+      <a href="primeros_pasos.html">Primeros pasos</a>
+      <a href="utilizacion.html">Utilización</a>
+      <a href="conclusiones.html">Funcionamiento y Conclusiones</a>
+      <a href="../docs/memoria.pdf" target="_blank">Memoria (PDF)</a>
+    </nav>
+    
+    </header>
+
+    <main class="card">
+      
+<h2>Utilización de Angular</h2>
+
+<p>
+Una vez que Angular se encuentra instalado y el proyecto ha sido generado, la utilización del framework se basa en una serie de comandos y prácticas que permiten crear componentes, configurar rutas, comunicarse con servicios y ejecutar la aplicación durante el desarrollo. Angular está diseñado para trabajar de forma modular, por lo que el uso cotidiano implica crear piezas pequeñas y organizadas que forman una aplicación completa.
+</p>
+
+<h3>Ejecutar el proyecto durante el desarrollo</h3>
+<p>
+El primer paso en la utilización de Angular es poner en marcha el servidor de desarrollo. Esto permite visualizar la aplicación y ver los cambios en tiempo real, ya que el framework recompila cada modificación automáticamente. Para iniciar el proyecto basta con situarse dentro de la carpeta del proyecto y ejecutar:
+</p>
+
+<pre>
+cd nombre_del_proyecto
+ng serve --open
+</pre>
+
+<p>
+El navegador se abrirá en <strong>http://localhost:4200</strong>, donde se puede interactuar con la aplicación mientras se desarrolla.
+</p>
+
+<h3>Creación de componentes</h3>
+<p>
+Angular trabaja sobre una arquitectura basada en componentes, por lo que uno de los usos más comunes es generar nuevos componentes que representen partes específicas de la interfaz, como menús, formularios, tarjetas o páginas completas. La CLI permite crearlos de manera automática con un solo comando:
+</p>
+
+<pre>
+ng generate component nombre_componente
+</pre>
+
+<p>
+Esto crea los archivos necesarios (HTML, TS, CSS y un archivo de pruebas) dentro de la estructura adecuada del proyecto. Cada componente tiene su propia vista y su propia lógica, lo que facilita mantener el código limpio y organizado.
+</p>
+
+<h3>Creación y uso de servicios</h3>
+<p>
+Los servicios son otra parte fundamental de la utilización de Angular. Se emplean para almacenar lógica reutilizable, gestionar datos, comunicarse con APIs externas y compartir información entre componentes. Para crear uno se utiliza:
+</p>
+
+<pre>
+ng generate service nombre_servicio
+</pre>
+
+<p>
+Un servicio puede realizar peticiones a un servidor utilizando <strong>HttpClient</strong>. Un ejemplo simple sería:
+</p>
+
+<pre>
+constructor(private http: HttpClient) {}
+
+getDatos() {
+  return this.http.get('https://api.ejemplo.com/datos');
+}
+</pre>
+
+<p>
+Este servicio puede ser utilizado por cualquier componente que lo necesite, manteniendo la lógica separada de la interfaz y facilitando el mantenimiento.
+</p>
+
+<h3>Navegación mediante rutas</h3>
+<p>
+Angular permite definir rutas para navegar entre diferentes vistas dentro de la aplicación, evitando recargas de página. La configuración se realiza en el módulo de enrutamiento y permite asignar un componente a cada camino o URL. Una configuración básica podría ser:
+</p>
+
+<pre>
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'productos', component: ProductosComponent },
+  { path: 'contacto', component: ContactoComponent }
+];
+</pre>
+
+<p>
+Con estas rutas definidas, se puede navegar mediante enlaces:
+</p>
+
+<pre>
+&lt;a routerLink="/productos"&gt;Ver productos&lt;/a&gt;
+</pre>
+
+<h3>Modificación de vistas y estilos</h3>
+<p>
+La utilización diaria también implica trabajar sobre las plantillas HTML y los estilos CSS de cada componente. Angular permite vincular datos desde la lógica al HTML mediante interpolación:
+</p>
+
+<pre>
+&lt;p&gt;Bienvenido, {{ nombreUsuario }}&lt;/p&gt;
+</pre>
+
+<p>
+Y permite aplicar estilos locales sin afectar al resto de la aplicación, ya que cada componente tiene su propio archivo <strong>.css</strong>. Esto evita conflictos y hace más sencillo modificar partes concretas de la interfaz.
+</p>
+
+<h3>Gestión del proyecto y compilación final</h3>
+<p>
+Una vez finalizado el desarrollo, Angular permite generar una versión optimizada de la aplicación lista para desplegar en un servidor. El comando utilizado para este proceso es:
+</p>
+
+<pre>
+ng build --configuration production
+</pre>
+
+<p>
+Este comando crea una carpeta <strong>dist/</strong> con todos los archivos optimizados y listos para ser publicados en cualquier servicio web o infraestructura de hosting.
+</p>
+
+<p>
+En resumen, la utilización de Angular se basa en un flujo de trabajo guiado por la CLI, apoyado en componentes, servicios y rutas, lo que permite construir aplicaciones complejas de manera organizada y con herramientas que facilitan tanto el desarrollo como el mantenimiento.
+</p>
+
+
+    </main>
+
+    <footer class="footer">
+      UNIR — Actividad 2 · Desarrollo de Aplicaciones en Red
+    </footer>
+  </div>
+</body>
+</html>

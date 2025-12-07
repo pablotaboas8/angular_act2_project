@@ -1,0 +1,172 @@
+/* =========================================
+   styles.css - Tutorial Angular 
+   ========================================= */
+
+/* Paleta  */
+:root{
+  --bg:#eef1f7;
+  --card:#ffffff;
+  --accent:#4f46e5;
+  --accent-light:#6366f1;
+  --text:#1e293b;
+  --nav-bg:#ffffffee;
+  --shadow:0 10px 30px rgba(0,0,0,0.10);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#f0f3fa,#e3e8f5);
+  color:var(--text);
+}
+
+/* Contenedor principal */
+.container{
+  max-width:1100px;
+  margin:40px auto;
+  padding:25px;
+}
+
+/* ===============================
+   ENCABEZADO
+   =============================== */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:var(--nav-bg);
+  padding:16px 22px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  backdrop-filter: blur(8px);
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.header h1{
+  font-size:26px;
+  font-weight:700;
+  color:var(--accent);
+}
+
+/* ===============================
+   NAVEGACIÓN 
+   =============================== */
+nav{
+  display:flex;
+  gap:16px;          
+  flex-wrap:wrap;    
+  justify-content:center; 
+  padding:12px 0;
+}
+
+/* Botones de navegación */
+nav a{
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:600;
+  padding:10px 22px;    
+  border-radius:25px;   
+  background:#ffffffcc; 
+  backdrop-filter:blur(6px);
+  box-shadow:0 4px 18px rgba(0,0,0,0.07);
+  transition:all .25s ease;
+}
+
+nav a:hover{
+  background:var(--accent);
+  color:white;
+  transform:translateY(-3px);
+  box-shadow:0 6px 22px rgba(79,70,229,0.35);
+}
+
+/* ===============================
+   TARJETAS
+   =============================== */
+.card{
+  background:var(--card);
+  padding:32px;
+  border-radius:18px;
+  margin-top:24px;
+  box-shadow:var(--shadow);
+  animation:fadeIn .5s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(15px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ===============================
+   TITULOS
+   =============================== */
+h2{
+  color:var(--accent);
+  font-size:26px;
+  margin-bottom:14px;
+}
+h3{
+  margin-top:22px;
+  color:var(--accent-light);
+  font-size:20px;
+}
+
+/* ===============================
+   TEXTO Y LISTAS
+   =============================== */
+p, li{
+  font-size:17px;
+  line-height:1.6;
+  margin-bottom:14px;
+}
+
+ul{
+  margin-left:24px;
+}
+
+/* ===============================
+   BLOQUES DE CÓDIGO
+   =============================== */
+pre{
+  background:#0f172a;
+  color:#e2e8f0;
+  padding:16px;
+  border-radius:12px;
+  overflow:auto;
+  margin:24px 0;
+  box-shadow:0 4px 18px rgba(0,0,0,0.25);
+}
+
+/* ===============================
+   PIE DE PÁGINA
+   =============================== */
+.footer{
+  text-align:center;
+  margin-top:35px;
+  font-size:15px;
+  color:#475569;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media(max-width:760px){
+  .header{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+  }
+  nav{
+    gap:12px;
+    padding:16px 0;
+  }
+  nav a{
+    padding:10px 18px;
+    font-size:15px;
+  }
+}
