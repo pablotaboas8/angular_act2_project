@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Instalación — Tutorial Angular</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Tutorial Angular — angular_act2_project</h1>
+      
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="instalacion.html">Instalación</a>
+      <a href="primeros_pasos.html">Primeros pasos</a>
+      <a href="utilizacion.html">Utilización</a>
+      <a href="conclusiones.html">Funcionamiento y Conclusiones</a>
+      <a href="../docs/memoria.pdf" target="_blank">Memoria (PDF)</a>
+    </nav>
+    
+    </header>
+
+    <main class="card">
+      
+<h2>Instalación de Angular</h2>
+
+<p>
+Antes de comenzar a trabajar con Angular es necesario preparar el entorno adecuado, ya que este framework no funciona directamente en el navegador sin una configuración previa. Angular sí requiere instalación, principalmente porque se apoya en herramientas que permiten crear, compilar y ejecutar proyectos de manera organizada. La pieza fundamental es Angular CLI, la línea de comandos oficial que automatiza la creación de componentes, servicios, rutas y toda la estructura interna del proyecto.
+</p>
+
+<h3>¿Se precisa instalación?</h3>
+<p>
+Sí. Para utilizar Angular es indispensable instalar varias herramientas previas que permiten gestionar el proyecto y ejecutar la aplicación. El framework depende de Node.js, de npm y de Angular CLI, que es el sistema que genera la estructura necesaria y facilita todas las tareas del desarrollo.
+</p>
+
+<h3>¿Qué pasos hay que realizar para realizar la instalación?</h3>
+<p>Primero es necesario instalar Node.js, que incluye el gestor de paquetes npm. Una vez hecho esto, se puede instalar Angular CLI y crear un proyecto nuevo usando los siguientes comandos:</p>
+
+<p><strong>Verificar versiones instaladas:</strong></p>
+<pre>node -v
+npm -v</pre>
+
+<p><strong>Instalar Angular CLI de forma global:</strong></p>
+<pre>npm install -g @angular/cli</pre>
+
+<p><strong>Crear un nuevo proyecto Angular:</strong></p>
+<pre>ng new nombre_del_proyecto</pre>
+
+<p><strong>Acceder al proyecto recién creado:</strong></p>
+<pre>cd nombre_del_proyecto</pre>
+
+<p><strong>Iniciar el servidor de desarrollo:</strong></p>
+<pre>ng serve --open</pre>
+
+<p>
+Con estos pasos básicos ya se obtiene un entorno funcional y listo para comenzar a desarrollar aplicaciones con Angular.
+</p>
+
+<h3>Versiones necesarias</h3>
+<p>
+Angular no obliga a usar versiones exactas, pero sí es recomendable trabajar con versiones actuales de Node.js, preferiblemente una versión LTS para asegurar compatibilidad. Angular CLI se actualiza constantemente, y cuando se crea un proyecto nuevo, este incluye automáticamente la versión estable del framework.
+</p>
+
+<h3>Rutas para tener en cuenta</h3>
+<p>
+Después de crear el proyecto, Angular genera una estructura organizada en diferentes carpetas. La ruta más relevante es <strong>src/app</strong>, donde se encuentran los componentes, servicios y módulos principales del proyecto. La carpeta <strong>node_modules</strong> contiene las dependencias instaladas mediante npm y no debe modificarse manualmente. El archivo <strong>angular.json</strong> ubicado en la raíz del proyecto controla la configuración global.
+</p>
+
+<h3>Variables de entorno</h3>
+<p>
+Aunque Angular no requiere variables de entorno para empezar a funcionar, sí permite definirlas cuando es necesario diferenciar configuraciones para desarrollo, pruebas o producción. Estas variables se gestionan en la carpeta <strong>src/environments</strong>, donde se encuentran archivos como:
+</p>
+
+<pre>
+src/environments/environment.ts
+src/environments/environment.prod.ts
+</pre>
+
+<h3>¿Necesita base de datos?</h3>
+<p>
+Angular no necesita una base de datos para instalarse o ejecutarse, ya que trabaja exclusivamente en el lado del cliente. No gestiona almacenamiento por sí mismo, pero puede conectarse fácilmente a APIs externas y servicios backend que sí utilicen bases de datos. En otras palabras, Angular consume datos, pero no los almacena internamente.
+</p>
+
+    </main>
+
+    <footer class="footer">
+      UNIR — Actividad 2 · Desarrollo de Aplicaciones en Red
+    </footer>
+  </div>
+</body>
+</html>

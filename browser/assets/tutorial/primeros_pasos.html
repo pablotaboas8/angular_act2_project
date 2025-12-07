@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Primeros pasos — Tutorial Angular</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Tutorial Angular — angular_act2_project</h1>
+      
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="instalacion.html">Instalación</a>
+      <a href="primeros_pasos.html">Primeros pasos</a>
+      <a href="utilizacion.html">Utilización</a>
+      <a href="conclusiones.html">Funcionamiento y Conclusiones</a>
+      <a href="../docs/memoria.pdf" target="_blank">Memoria (PDF)</a>
+    </nav>
+    
+    </header>
+
+    <main class="card">
+      
+<h2>Primeros pasos con Angular</h2>
+
+<p>
+Una vez instalado Angular y creado el proyecto inicial, los primeros pasos consisten en comprender la estructura básica que genera la CLI, aprender a modificar el componente principal y crear nuevos componentes que permitirán construir la aplicación. Angular funciona mediante una arquitectura basada en componentes, donde cada sección visible de la interfaz se organiza como una pieza independiente con su propio código.
+</p>
+
+<h3>Estructura inicial del proyecto</h3>
+<p>
+Tras ejecutar el comando de creación del proyecto, Angular genera una carpeta con una estructura organizada que permite comenzar a trabajar de inmediato. La parte más importante es la carpeta <strong>src/app</strong>, que contiene el componente principal llamado <strong>AppComponent</strong>. Este componente actúa como punto de entrada de la aplicación y es donde se comienza a integrar contenido.
+</p>
+
+<p><strong>Creación del proyecto:</strong></p>
+<pre>
+ng new nombre_del_proyecto --routing --style=css
+</pre>
+
+<p>
+Este comando genera todo lo necesario para empezar: un módulo principal, un sistema de rutas opcional y un conjunto de archivos preparados para su uso inmediato.
+</p>
+
+<h3>Arrancar el servidor de desarrollo</h3>
+<p>
+Para visualizar los primeros resultados es necesario iniciar el servidor de desarrollo. Angular recompila en tiempo real, lo que significa que cualquier cambio se refleja en el navegador de manera automática.
+</p>
+
+<pre>
+cd nombre_del_proyecto
+ng serve --open
+</pre>
+
+<p>
+El proyecto se abrirá en <strong>http://localhost:4200</strong>. Desde este punto ya se puede comenzar a editar el componente principal para personalizar la aplicación.
+</p>
+
+<h3>Modificar el componente principal (AppComponent)</h3>
+<p>
+El archivo <strong>app.component.html</strong> contiene la plantilla inicial que muestra Angular al cargar la aplicación. Modificarlo es el primer paso para personalizar el proyecto. Por ejemplo, se puede añadir un mensaje de bienvenida muy simple:
+</p>
+
+<pre>
+&lt;h1&gt;Bienvenido a mi primer proyecto con Angular&lt;/h1&gt;
+</pre>
+
+<p>
+Este archivo está directamente vinculado al archivo <strong>app.component.ts</strong>, donde se encuentra la lógica del componente. En esta etapa inicial no es necesario modificar la lógica, pero es útil saber que es aquí donde se gestionan variables, funciones y comportamiento dinámico.
+</p>
+
+<h3>Crear el primer componente</h3>
+<p>
+Uno de los primeros pasos fundamentales es crear componentes adicionales para separar partes de la interfaz. Angular facilita esta tarea mediante un comando específico que genera todos los archivos necesarios manteniendo la estructura recomendada.
+</p>
+
+<pre>
+ng generate component saludo
+</pre>
+
+<p>
+Este comando crea una carpeta con cuatro archivos: HTML, TypeScript, CSS y pruebas. El componente puede contener contenido simple, como un texto de bienvenida:
+</p>
+
+<pre>
+&lt;p&gt;¡Hola! Esto es un componente de saludo.&lt;/p&gt;
+</pre>
+
+<p>
+Para mostrar este componente en la página principal, basta con insertarlo dentro de <strong>app.component.html</strong>:
+</p>
+
+<pre>
+&lt;app-saludo&gt;&lt;/app-saludo&gt;
+</pre>
+
+<h3>Comprender cómo Angular muestra la información</h3>
+<p>
+Angular utiliza un sistema de interpolación que permite mostrar datos desde la lógica (archivo .ts) hacia la vista (archivo .html). Por ejemplo, si en el archivo <strong>app.component.ts</strong> se define una variable:
+</p>
+
+<pre>
+titulo = 'Mi primer proyecto Angular';
+</pre>
+
+<p>
+Se puede mostrar en la plantilla con:
+</p>
+
+<pre>
+&lt;h2&gt;{{ titulo }}&lt;/h2&gt;
+</pre>
+
+<p>
+Este mecanismo permite actualizar la interfaz automáticamente cuando cambian los datos, lo que hace que Angular sea ideal para aplicaciones dinámicas.
+</p>
+
+<h3>Editar estilos y personalizar componentes</h3>
+<p>
+Cada componente tiene su propio archivo CSS, lo que permite modificar su apariencia sin afectar al resto de la aplicación. Esto facilita trabajar con estilos independientes para cada parte de la interfaz. Por ejemplo:
+</p>
+
+<pre>
+h2 {
+  color: #4f46e5;
+  font-size: 24px;
+}
+</pre>
+
+<p>
+Gracias a esta separación es posible crear interfaces complejas sin que los estilos entren en conflicto.
+</p>
+
+<h3>Conclusión de los primeros pasos</h3>
+<p>
+En resumen, los primeros pasos con Angular consisten en familiarizarse con la estructura del proyecto, aprender a modificar el componente principal, crear y mostrar nuevos componentes, trabajar con interpolación y comprender cómo se organizan los estilos. Estos fundamentos permiten construir aplicaciones más elaboradas incorporando rutas, servicios y comunicación con APIs, que se verán en etapas posteriores.
+</p>
+
+
+    </main>
+
+    <footer class="footer">
+      UNIR — Actividad 2 · Desarrollo de Aplicaciones en Red
+    </footer>
+  </div>
+</body>
+</html>

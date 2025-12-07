@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Funcionamiento y Conclusiones — Tutorial Angular</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Tutorial Angular — angular_act2_project</h1>
+      
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="instalacion.html">Instalación</a>
+      <a href="primeros_pasos.html">Primeros pasos</a>
+      <a href="utilizacion.html">Utilización</a>
+      <a href="conclusiones.html">Funcionamiento y Conclusiones</a>
+      <a href="../docs/memoria.pdf" target="_blank">Memoria (PDF)</a>
+    </nav>
+    
+    </header>
+
+    <main class="card">
+      
+<h2>Funcionamiento del Framework Angular</h2>
+
+<h3>¿Actúa sobre páginas, ficheros, secciones…?</h3>
+<p>
+Angular actúa sobre una estructura organizada en componentes, que son pequeñas piezas independientes formadas por un archivo TypeScript con la lógica, un archivo HTML con la vista y una hoja de estilos propia. En lugar de trabajar sobre páginas completas como en el desarrollo tradicional, Angular divide la interfaz en secciones reutilizables que se integran mediante módulos y rutas. Esta forma de trabajar permite crear aplicaciones más estructuradas, fáciles de mantener y escalables a largo plazo.
+</p>
+
+<h3>¿Cómo se editan o modifican los ficheros que actúan en el framework?</h3>
+<p>
+Los ficheros de Angular se editan directamente en el directorio del proyecto utilizando un editor como Visual Studio Code. Cada componente tiene sus propios archivos HTML, TS y CSS, que pueden modificarse libremente según las necesidades del desarrollo. Al guardar cualquier cambio, Angular recompila automáticamente la aplicación gracias al servidor de desarrollo, y el navegador muestra las modificaciones sin necesidad de recargar manualmente. Esto permite trabajar de manera fluida y verificar de inmediato cada avance realizado.
+</p>
+
+<h3>¿Cómo se referencian los ficheros creados desde otras aplicaciones?</h3>
+<p>
+Los ficheros internos del proyecto no necesitan ser referenciados directamente por otras aplicaciones, ya que Angular los compila y agrupa en un conjunto de archivos finales dentro de la carpeta <strong>dist/</strong>. Es esta versión optimizada la que puede ser desplegada en un servidor o integrada dentro de otros sistemas. Si una aplicación externa necesita interactuar con la desarrollada en Angular, normalmente lo hace a través de rutas públicas expuestas en el navegador o mediante APIs que la propia aplicación consume desde sus servicios internos, y no mediante los archivos fuente originales.
+</p>
+
+<h2>Conclusiones del tutorial</h2>
+
+<p>
+Este tutorial ha permitido recorrer de manera organizada los aspectos esenciales del framework Angular, comenzando por su proceso de instalación y pasando por los primeros pasos, la creación de componentes, el uso de servicios, la configuración de rutas y el funcionamiento interno de su arquitectura por componentes. Se ha mostrado cómo Angular estructura una aplicación moderna, cómo facilita la separación entre lógica e interfaz y cómo permite un desarrollo fluido mediante su servidor de compilación en tiempo real.
+</p>
+
+<p>
+El objetivo de este tutorial era ofrecer una visión clara del alcance de Angular y proporcionar los conocimientos necesarios para comprender su funcionamiento básico. Se ha logrado entender cómo se organizan los proyectos, cómo se construyen las diferentes partes de una aplicación y qué herramientas ofrece el framework para ampliar sus capacidades mediante módulos, servicios o comunicación con APIs.
+</p>
+
+<p>
+En conjunto, el tutorial cumple los objetivos planteados: proporcionar una base sólida para empezar a desarrollar aplicaciones con Angular y ofrecer una comprensión general de su estructura, sus posibilidades y la forma de trabajar con él. Con estos conocimientos iniciales, es posible avanzar hacia funcionalidades más avanzadas y afrontar proyectos de mayor complejidad dentro del ecosistema del framework.
+</p>
+
+    </main>
+
+    <footer class="footer">
+      UNIR — Actividad 2 · Desarrollo de Aplicaciones en Red
+    </footer>
+  </div>
+</body>
+</html>
